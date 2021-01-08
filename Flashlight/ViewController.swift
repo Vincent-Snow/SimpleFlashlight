@@ -7,16 +7,19 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
 
 
     @IBOutlet weak var turnOn: UIButton!
+    
+
     var isOn: Bool = true
-    let colors: [UIColor] = [.blue, .purple, .red, .yellow, .brown, .clear, .cyan, .green, .darkGray, .magenta]
+    let colors: [UIColor] = [.blue, .purple, .red, .yellow, .brown, .cyan, .green, .darkGray, .magenta, .orange, .systemIndigo, .systemPink]
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
+    
     var counter = 0
     func clicked() {
         view.backgroundColor = colors[counter]
@@ -28,7 +31,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func turnOnClicked(_ sender: Any) {
+//        for _ in 1...5 {
             clicked()
+//            sleep(1)
+//        }
+        
+//        for i in colors {
+//            view.backgroundColor = i
+//            view.setNeedsDisplay()
+//            sleep(1)
+//        }
 //        if isOn == true {
 //            isOn = false
 //            view.backgroundColor = .purple
